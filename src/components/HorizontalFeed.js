@@ -19,6 +19,7 @@ export default function HorizontalFeed({movies}) {
 
 const HorizontalFeedStyles = {
   scrollSnapType: 'x mandatory',
+  scrollBehavior: 'smooth',
   overflowX: 'scroll',
   display: 'flex',
   padding: '15px 0'
