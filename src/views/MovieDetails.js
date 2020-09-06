@@ -10,11 +10,13 @@ export default function MovieDetails() {
   const {movieId} = useParams()
 
   useEffect(()=> {
+    if(currentMovie.data && currentMovie.data.id === Number(movieId)) return
+
     dispatch(fetchCurrentMovie(movieId))
   },[])
 
   if(currentMovie.error) return (<p> {currentMovie.error.status_message}</p>)
-  if(!currentMovie.data || (!currentMovie.data && currentMovie.isLoading)) return (<p> loading movie description...</p>)
+  if(!currentMovie.data || currentMovie.isLoading) return (<p> loading movie description...</p>)
 
   return (
     <section>
