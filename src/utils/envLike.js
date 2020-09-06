@@ -1,0 +1,5 @@
+export const API_KEY = '212cac928eced01b8f6f53f48ac78102'
+export const API_HOST = 'https://api.themoviedb.org'
+export const API_VERSION = '3'
+export const API_PREFIX = 'movie'
+export const IMAGE_HOST = 'https://image.tmdb.org/t/p'
